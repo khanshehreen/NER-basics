@@ -1,0 +1,8 @@
+import Algorithmia
+
+apiKey = "simSG4vgCnUl+wGcryvNC42YcO51"
+client = Algorithmia.client(apiKey)
+input = "Incredible, Chicago and India cities officials estimate that there's a record 5 million people at Cubs parade"
+algo = client.algo("algo://StanfordNLP/NamedEntityRecognition/0.1.1")
+result=algo.pipe(input).result
+print(result)
